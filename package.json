@@ -1,0 +1,12 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "1836-crud_js_async project",
+  "main": "api/server.js",
+  "scripts": {
+    "start": "node api/server.js"
+  },
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
