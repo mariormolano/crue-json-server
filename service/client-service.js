@@ -1,8 +1,11 @@
+const URL = "https://crue-json-server-4vl3.vercel.app/perfil";
+
+
 const listaClientes = () =>
-  fetch("http://localhost:5000/perfil").then((respuesta) => respuesta.json());
+  fetch(URL).then((respuesta) => respuesta.json());
 
 const crearCliente = (nombre, email) => {
-  return fetch("http://localhost:5000/perfil", {
+  return fetch(URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -12,19 +15,19 @@ const crearCliente = (nombre, email) => {
 };
 
 const eliminarCliente = (id) => {
-  return fetch(`http://localhost:5000/perfil/${id}`, {
+  return fetch(`${URL}/${id}`, {
     method: "DELETE",
   });
 };
 
 const detalleCliente = (id) => {
-  return fetch(`http://localhost:5000/perfil/${id}`).then((respuesta) =>
+  return fetch(`${URL}/${id}`).then((respuesta) =>
     respuesta.json()
   );
 };
 
 const actualizarCliente = (nombre, email, id) => {
-  return fetch(`http://localhost:5000/perfil/${id}`, {
+  return fetch(`${URL}/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
